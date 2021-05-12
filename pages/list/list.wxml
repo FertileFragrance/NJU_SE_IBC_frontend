@@ -1,0 +1,23 @@
+<!--list.wxml-->
+<view class="list">
+<template name="list" >
+<navigator url="../detail/detail?id={{id}}" hover-class="navigator-hover">
+<view class='list-big'>
+<!--跳转新页面-->
+ <view class='list-left'>
+  <image class='list-img' src='{{img}}'></image>
+ </view>
+<view class='list-right'>
+ <view class='right-text'>{{title}}</view>
+ <view class='list-time'>{{time}}</view>
+</view>
+</view>
+</navigator>
+
+
+</template>
+<view wx:for="{{mydata}}" wx:key="id" class='list'>
+<template is="list" data="{{...item}}"/>
+ </view>
+ 
+</view>
