@@ -1,23 +1,21 @@
 <!--list.wxml-->
 <view class="list">
 <template name="list" >
-<navigator url="../detail/detail?id={{id}}" hover-class="navigator-hover">
+<navigator url="../detail/detail?content={{content}}" hover-class="navigator-hover">
 <view class='list-big'>
-<!--跳转新页面-->
  <view class='list-left'>
-  <image class='list-img' src='{{img}}'></image>
+  <image class='list-img' src='{{cover}}'></image>
  </view>
 <view class='list-right'>
  <view class='right-text'>{{title}}</view>
- <view class='list-time'>{{time}}</view>
+ <view class='list-author'>by: {{author}}</view>
+ <view class='list-time'>{{pubdate}}</view>
 </view>
 </view>
 </navigator>
-
-
 </template>
-<view wx:for="{{mydata}}" wx:key="id" class='list'>
+
+<view wx:for="{{newsList}}" wx:key="id" class='list' data-item="item">
 <template is="list" data="{{...item}}"/>
  </view>
- 
 </view>
