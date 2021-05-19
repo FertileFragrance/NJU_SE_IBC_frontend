@@ -21,11 +21,17 @@
   flex: 1;
   margin-left:20rpx;
 }
+.list-author{
+  position: absolute;
+  bottom: 20px;
+  color: #999;
+  font-size:12px;
+}
 .list-time{
   position:absolute;
   bottom:0;
   color:#999;
-  font-size:15px;
+  font-size:12px;
 }
 .right-text{
   overflow: hidden;

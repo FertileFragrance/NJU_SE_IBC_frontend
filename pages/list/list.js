@@ -3,68 +3,22 @@
 const app = getApp()
 Page({
   data: {
-    lastid:0,
-    mydata:[{
-      "id":'1',
-      "img": '../../img/12.png',
-      "title": '虽然这个页面很丑但我觉得我的审美也就这样了',
-      "time": '2016-09-23 17-06'
-    }, {
-      "id": '1',
-      "img": '../../img/11.jpg',
-      "title": '广州科技项目申报流程及验收结题',
-      "time": '2016-09-23 17-06'
-      }, {
-        "id": '3',
-        "img": '../../img/10.jpg',
-        "title": '精益管理：7大浪费的产生原因和消除方法',
-        "time": '2016-09-23 17-06'
-    }, {
-      "id": '4',
-      "img": '../../img/9.jpg',
-      "title": '中小企业应对非对称竞争的四大战略',
-      "time": '2016-09-23 17-06'
-      }, {
-        "id": '5',
-        "img": '../../img/8.jpg',
-        "title": '【政策快讯】高企最高奖励100万！',
-        "time": '2016-09-23 17-06'
-    }, {
-      "id": '6',
-      "img": '../../img/7.jpg',
-      "title": '2018年广东省各地高新技术企业申报时间汇总',
-      "time": '2016-09-23 17-06'
-      }, {
-        "id": '7',
-        "img": '../../img/13.png',
-        "title": '什么样的社产品才是最好的？',
-        "time": '2016-09-23 17-06'
-    }, {
-      "id": '8',
-      "img": '../../img/14.jpg',
-      "title": '2018年广东省各地高新技术企业申报时间汇总',
-      "time": '2016-09-23 17-06'
-      }, {
-        "id": '9',
-        "img": '../../img/2.png',
-        "title": '中小企业应对非对称竞争的四大战略',
-        "time": '2016-09-23 17-06'
-    }, {
-      "id": '10',
-      "img": '../../img/1.png',
-      "title": '什么样的社产品才是最好的？',
-      "time": '2016-09-23 17-06'
-    }],
-  
+    newsList: []
   },
- 
-  
 
-  
-  
- 
-  //事件处理函数
- 
-  
-
+  onLoad: function(options){
+    let that = this
+    wx.request({
+      url : 'http://127.0.0.1:5000/getAllNews',
+      success:function(res){
+        that.setData({
+          newsList: res.data.res,
+        })
+        console.log(that.data)
+      },
+      fail:function(res){
+        console.log('news load error')
+      }
+    })
+  }
 })

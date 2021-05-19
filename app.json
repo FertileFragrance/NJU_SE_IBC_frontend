@@ -9,31 +9,33 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#000",
-    "navigationBarTitleText": "企业新闻",
+    "navigationBarBackgroundColor": "#09F",
+    "navigationBarTitleText": "南大天格",
     "navigationBarTextStyle": "white"
   },
+
   "tabBar": {
     "list": [
       {
         "pagePath": "pages/list/list",
         "text": "首页",
         "iconPath": "/img/1.png",
-        "selectedIconPath": "/img/3.png"
+        "selectedIconPath": "/img/1.png"
       },
       {
         "pagePath": "pages/about/about",
         "text": "关于我们",
         "iconPath": "/img/2.png",
-        "selectedIconPath": "/img/4.png"
+        "selectedIconPath": "/img/2.png"
       },
       {
         "pagePath": "pages/form/form",
         "text": "用户反馈",
         "iconPath": "/img/4.png",
-        "selectedIconPath": "/img/2.png"
+        "selectedIconPath": "/img/4.png"
       }
     ]
   },
+  "entryPagePath": "pages/list/list",
   "sitemapLocation": "sitemap.json"
 }
