@@ -5,15 +5,16 @@
     "pages/about/about",
     "pages/form/form",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/map/map"
   ],
+  "permission": {"scope.userLocation": {"desc": "希望获取您的位置"}},
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#09F",
     "navigationBarTitleText": "南大天格",
     "navigationBarTextStyle": "white"
   },
-
   "tabBar": {
     "list": [
       {
@@ -29,8 +30,8 @@
         "selectedIconPath": "/img/2.png"
       },
       {
-        "pagePath": "pages/form/form",
-        "text": "用户反馈",
+        "pagePath": "pages/map/map",
+        "text": "地图展示",
         "iconPath": "/img/4.png",
         "selectedIconPath": "/img/4.png"
       }

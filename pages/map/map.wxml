@@ -1,0 +1,8 @@
+<!--pages/map/map.wxml-->
+<!-- <text>pages/map/map.wxml</text> -->
+<map id="tiangeMap" class="tiangeMap" subkey="TD6BZ-PEBCR-PZVWD-WUGZD-OIG42-L5F5U"/>
+<view class="btn">
+  <button type="primary" bindtap="trySearch">搜索位置尝试</button>
+</view>
+<!-- <script charset="utf-8" src="https://map.qq.com/api/js?v=2.exp&key=TD6BZ-PEBCR-PZVWD-WUGZD-OIG42-L5F5U"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js" type="text/javascript" charset="utf-8"></script> -->

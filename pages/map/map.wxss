@@ -1,0 +1,9 @@
+/* pages/map/map.wxss */
+page {
+  height: 100%;
+  width: 100%;
+}
+.tiangeMap{
+  height: 100%;
+  width: 100%;
+}
