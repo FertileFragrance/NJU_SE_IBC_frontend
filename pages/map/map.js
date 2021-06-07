@@ -3,8 +3,11 @@ var latitude=44.2;
 var longitude=130.4;
 
 
+
       
 Page({
+
+
   
 trySearch:function (latitude,longitude) {
   wx.openLocation({
@@ -18,6 +21,27 @@ trySearch:function (latitude,longitude) {
    */
   data: {
 
+        polyline: [{
+          points: [{//标点的经纬度
+              longitude: 121.44577861,
+              latitude: 37.48205260
+            }, {
+              longitude: 10.44611657,
+              latitude: 6.48207388
+            }, {
+              longitude: 19.44725382,
+              latitude: 37.48224841
+            }, {
+              longitude: 121.44766152,
+              latitude: 38.48237186
+            }
+          ],
+          color: "#33c9FFDD",
+          width: 7,
+          // dottedLine: true
+        }]
+    
+    
   },
 
 

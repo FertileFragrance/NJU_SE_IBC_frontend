@@ -1,6 +1,8 @@
 <!--pages/map/map.wxml-->
 <!-- <text>pages/map/map.wxml</text> -->
-<map id="tiangeMap" class="tiangeMap" subkey="TD6BZ-PEBCR-PZVWD-WUGZD-OIG42-L5F5U"/>
+<map id="tiangeMap" class="tiangeMap" latitude="37.488" longitude="121.4499" scale="1" 
+   show-compass="true"show-scale="true" subkey="TD6BZ-PEBCR-PZVWD-WUGZD-OIG42-L5F5U" polyline="{{polyline}}"/>
+   
 <view class="btn">
   <button type="primary" bindtap="trySearch">搜索位置尝试</button>
 </view>
