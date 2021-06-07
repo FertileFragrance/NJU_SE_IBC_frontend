@@ -1,17 +1,3 @@
-<!--about.wxml-->
-<import src="../../wxParse/wxParse.wxml"/>
-<view class="about">
-
-<view class='about-top'>
-<view ><image src="{{img}}" class='about-img' ></image></view>
-<view class='about-title'>{{title}}</view>
-</view>
-<view class='about-text'>
- <template is="wxParse" data="{{wxParseData:intre.nodes}}"/>
-</view>
-<view class='numtab'>{{contab}}</view>
-<view class='add'>地址1：{{address}}</view>
-<view class='about-tab'>联系电话：{{mobile}}</view>
-<view class='business'>商务合作：{{email}}</view>
- 
+<view style="height: 100%; width: 100%;">
+    <canvas type="webgl" id="c" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" bindtouchcancel="touchCancel" bindlongtap="longTap" bindtap="tap"></canvas>
 </view>

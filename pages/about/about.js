@@ -1,8 +1,7 @@
-//about.js
-//获取应用实例
+import * as THREE from '../../libs/three.weapp'
+import loadObj from './loadObj'
 
 const app = getApp()
-let wxparse = require("../../wxParse/wxParse.js");
 Page({
   data: {
     img: '../../img/7.jpg',
@@ -14,8 +13,38 @@ Page({
     email:'1234567'
   },
   onLoad: function () {
-    wxparse.wxParse('intre', 'html', this.data.intre, this, 5)
+    wx.createSelectorQuery()
+    .select('#c')
+    .node()
+    .exec((res) => {
+      const canvas = new THREE.global.registerCanvas(res[0].node)
+      loadObj(canvas, THREE)
+    })
+  },
 
-  }
+  onUnload: function () {
+		THREE.global.clearCanvas()
+	},
+	touchStart(e) {
+		// console.log('canvas', e)
+		THREE.global.touchEventHandlerFactory('canvas', 'touchstart')(e)
+	},
+	touchMove(e) {
+		// console.log('canvas', e)
+		THREE.global.touchEventHandlerFactory('canvas', 'touchmove')(e)
+	},
+	touchEnd(e) {
+		// console.log('canvas', e)
+		THREE.global.touchEventHandlerFactory('canvas', 'touchend')(e)
+	},
+	touchCancel(e) {
+		// console.log('canvas', e)
+	},
+	longTap(e) {
+		// console.log('canvas', e)
+	},
+	tap(e) {
+		// console.log('canvas', e)
+	},
 
 })
