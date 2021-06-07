@@ -36,7 +36,7 @@ trySearch:function (latitude,longitude) {
               latitude: 38.48237186
             }
           ],
-          //color: "#33c9FFDD",
+          color: "#33c9FFDD",
           width: 7,
           // dottedLine: true
         }]
