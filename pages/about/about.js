@@ -18,7 +18,8 @@ Page({
     .node()
     .exec((res) => {
       const canvas = new THREE.global.registerCanvas(res[0].node)
-      loadObj(canvas, THREE)
+			loadObj(canvas, THREE)
+
     })
   },
 

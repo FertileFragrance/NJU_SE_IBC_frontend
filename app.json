@@ -6,7 +6,8 @@
     "pages/form/form",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/map/map"
+    "pages/map/map",
+    "pages/threejsExample2/threejsExample2"
   ],
   "permission": {"scope.userLocation": {"desc": "希望获取您的位置"}},
   "window": {

@@ -1,0 +1,9 @@
+<view class='container'>
+  <view class="view-row" style="color:#aaa;font-size:36rpx;margin:30rpx;border-bottom:1rpx solid #aaa;padding:10rpx">Threejs—手势旋转缩放的立方体</view>
+  <view style="height: 450px; width: 100%;" bindtouchstart="documentTouchStart" bindtouchmove="documentTouchMove" bindtouchend="documentTouchEnd">
+    <canvas type="webgl" id="webgl" style="width: 100%; height:100%;" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" bindtouchcancel="touchCancel" bindlongtap="longTap" bindtap="tap"></canvas>
+  </view>
+
+<!-- <view style="width:200px;height:10px"></view>
+<ad unit-id="adunit-43861188c2b60d58" ad-type="grid" grid-opacity="0.8" grid-count="5" ad-theme="white"></ad> -->
+</view>
