@@ -12,29 +12,31 @@
   "permission": {"scope.userLocation": {"desc": "希望获取您的位置"}},
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#09F",
+    "navigationBarBackgroundColor": "#1296db",
     "navigationBarTitleText": "南大天格",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
+    "selectedColor": "#1296db",
+    "Color": "#bfbfbf",
     "list": [
       {
         "pagePath": "pages/list/list",
         "text": "首页",
-        "iconPath": "/img/1.png",
-        "selectedIconPath": "/img/1.png"
+        "iconPath": "/img/news02.png",
+        "selectedIconPath": "/img/news01.png"
       },
       {
         "pagePath": "pages/about/about",
         "text": "科普模型",
-        "iconPath": "/img/2.png",
-        "selectedIconPath": "/img/2.png"
+        "iconPath": "/img/satellite02.png",
+        "selectedIconPath": "/img/satellite01.png"
       },
       {
         "pagePath": "pages/map/map",
         "text": "地图展示",
-        "iconPath": "/img/4.png",
-        "selectedIconPath": "/img/4.png"
+        "iconPath": "/img/map02.png",
+        "selectedIconPath": "/img/map01.png"
       }
     ]
   },
