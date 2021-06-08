@@ -1,21 +1,16 @@
 // pages/map/map.js
-var latitude=44.2;
-var longitude=130.4;
-
-
-
+// var latitude=44.2;
+// var longitude=130.4;
       
 Page({
 
-
+// trySearch:function (latitude,longitude) {
+//   wx.openLocation({
+//     latitude: 34.2,
+//     longitude: 120,
+//   })
   
-trySearch:function (latitude,longitude) {
-  wx.openLocation({
-    latitude: 34.2,
-    longitude: 120,
-  })
-  
-},
+//},
   /**
    * 页面的初始数据
    */
@@ -25,22 +20,27 @@ trySearch:function (latitude,longitude) {
           points: [{//标点的经纬度
               longitude: 121.44577861,
               latitude: 37.48205260
-            }, {
-              longitude: 10.44611657,
-              latitude: 6.48207388
-            }, {
-              longitude: 19.44725382,
-              latitude: 37.48224841
-            }, {
-              longitude: 121.44766152,
-              latitude: 38.48237186
+            },{
+              longitude:101,
+              latitude:7
             }
           ],
           color: "#33c9FFDD",
           width: 7,
           // dottedLine: true
+        }],
+        markers: [{
+          id:0,
+          name:"hahaha",
+          iconPath:"../../img/1.png",
+          title:"this is title",
+          longitude: 121.44577861,
+          latitude: 37.48205260,
+          width:50,
+          height:50
+            
         }]
-    
+        
     
   },
 
@@ -49,11 +49,25 @@ trySearch:function (latitude,longitude) {
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    //实例化API核心类
+    // 实例化API核心类
     // qqmapsdk=new QQMapWX({
     //   key:'TD6BZ-PEBCR-PZVWD-WUGZD-OIG42-L5F5U'
     // });
     // this.mapCtx=wx.createMapContext('tiangeMap' )
+
+    let that = this
+    wx.request({
+      url : '',//todo here
+      success:function(res){
+        that.setData({
+          points: res.data,
+        })
+        console.log(that.data)
+      },
+      fail:function(res){
+        console.log('map get points error')
+      }
+    })
   },
 
   /**
