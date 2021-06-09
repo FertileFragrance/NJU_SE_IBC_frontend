@@ -1,0 +1,15 @@
+<map class="map" id="map"
+	latitude="{{location.latitude}}"
+  longitude="{{location.longitude}}"
+  markers="{{markers}}"
+  polyline="{{polyline}}"
+  scale="{{scale}}"
+  show-compass ="true" 
+  show-scale="true" 
+  show-location="true"
+  subkey="TD6BZ-PEBCR-PZVWD-WUGZD-OIG42-L5F5U"
+  enable-satellite="true" 
+  include-points="{{markers}}" ></map>
+  <button class = "btn"  bindtap="onRunApi" >
+    run
+  </button>

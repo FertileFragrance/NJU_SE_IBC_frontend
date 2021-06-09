@@ -7,9 +7,14 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/map/map",
-    "pages/threejsExample2/threejsExample2"
+    "pages/threejsExample2/threejsExample2",
+    "pages/movealong/movealong"
   ],
-  "permission": {"scope.userLocation": {"desc": "希望获取您的位置"}},
+  "permission": {
+    "scope.userLocation": {
+      "desc": "希望获取您的位置"
+    }
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#1296db",
@@ -33,7 +38,7 @@
         "selectedIconPath": "/img/satellite01.png"
       },
       {
-        "pagePath": "pages/map/map",
+        "pagePath": "pages/movealong/movealong",
         "text": "地图展示",
         "iconPath": "/img/map02.png",
         "selectedIconPath": "/img/map01.png"

@@ -1,0 +1,14 @@
+/* pages/movealong/movealong.wxss */
+
+.map {
+  width:100%;
+  height:90%;
+  position: relative;
+}
+
+.btn {
+  width: 60%;
+  margin-top: 20rpx;
+  background-color: #1296bd;
+  color: #FFF;
+}
