@@ -85,16 +85,34 @@ export default function (canvas, THREE) {
 
         function onError() { }
 
-        let loader = new OBJLoader(manager);
+        let mtlLoader = new MTLLoader(manager);
+	    // mtlLoader.setPath('../../models/');
+		mtlLoader.load('http://mycprotein.myqnapcloud.cn:39010/computernetwork/platform.mtl?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=minioadmin%2F20210624%2F%2Fs3%2Faws4_request&X-Amz-Date=20210624T161634Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=0f2f2f2dbd2fbcc353dd2a81eb3d41ec68624e8a948ea03b5de3819c236af165', function(materials) {
+			
+		    materials.preload();
+			
+		    let objLoader = new OBJLoader(manager);
+		    objLoader.setMaterials(materials);
+		    // objLoader.setPath('../../models/');
+			objLoader.load('http://mycprotein.myqnapcloud.cn:39010/computernetwork/platform.obj?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=minioadmin%2F20210624%2F%2Fs3%2Faws4_request&X-Amz-Date=20210624T161648Z&X-Amz-Expires=518400&X-Amz-SignedHeaders=host&X-Amz-Signature=76b541bbd9ce506d4d60ec67213310150af061560255ed39432af49edc8c39bd', function(obj) {
+                object = obj;
+                var box3 = new THREE.Box3();
+                box3.setFromObject(obj);
+                var size_temp = box3.getSize();
+                obj.scale.set(100 / size_temp.x, 100 / size_temp.y, 100 / size_temp.z);
+			    }, onProgress, onError);
+			}, onProgress, onError);
 
-        loader.load('http://mycprotein.myqnapcloud.cn:39010/computernetwork/%E5%8D%AB%E6%98%9F%E5%B9%B3%E5%8F%B0.obj?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=minioadmin%2F20210608%2F%2Fs3%2Faws4_request&X-Amz-Date=20210608T114641Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=b70ea9f19d83dbec65bdd6879452156408cce4e61fda113ee5c4d4349af955a7', function (obj) {
-            object = obj;
-            var box3 = new THREE.Box3();
-            box3.setFromObject(obj);
-            var size_temp = box3.getSize();
-            obj.scale.set(100 / size_temp.x, 100 / size_temp.y, 100 / size_temp.z);
-            //obj.rotation.y = degree*3.14159265/180;
-        }, onProgress, onError);
+        // let loader = new OBJLoader(manager);
+
+        // loader.load('http://mycprotein.myqnapcloud.cn:39010/computernetwork/platform.obj?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=minioadmin%2F20210624%2F%2Fs3%2Faws4_request&X-Amz-Date=20210624T161648Z&X-Amz-Expires=518400&X-Amz-SignedHeaders=host&X-Amz-Signature=76b541bbd9ce506d4d60ec67213310150af061560255ed39432af49edc8c39bd', function (obj) {
+        //     object = obj;
+        //     var box3 = new THREE.Box3();
+        //     box3.setFromObject(obj);
+        //     var size_temp = box3.getSize();
+        //     obj.scale.set(100 / size_temp.x, 100 / size_temp.y, 100 / size_temp.z);
+        //     //obj.rotation.y = degree*3.14159265/180;
+        // }, onProgress, onError);
 
         window.addEventListener('mousewheel', mousewheel, false);
     }
